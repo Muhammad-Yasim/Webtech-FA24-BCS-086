@@ -60,7 +60,7 @@ body{
     cursor: pointer;
 }
 
-.first-banner{
+/* .first-banner{
     width: 100%;
     overflow: hidden;
 }
@@ -69,9 +69,19 @@ body{
     width: 100%;
     height: auto;
     display: block;
+} */
+
+
+.first-banner {
+    width: 100%;
+    overflow: hidden;
 }
 
-
+.first-banner video {
+    width: 100%;
+    height: auto;
+    display: block;
+}
 
 
 .categories{
@@ -94,6 +104,15 @@ body{
     font-weight: bold;
     margin-top: 5px;
     color: #222;
+}
+
+.category a{
+    text-decoration: none;
+}
+
+.category a:hover{
+    text-decoration: underline;
+    text-decoration-color: black;
 }
 
 
@@ -127,6 +146,7 @@ body{
 .men-text p{
     font-size: 10px;
     margin: 4px 0 0;
+    text-decoration: underline;
 }
 
 
@@ -155,6 +175,14 @@ body{
     font-size: 12px;
     margin-bottom: 12px;
     color: #555;
+}
+
+.side-menu p:hover{
+    color: black;
+}
+
+.side-menu a{
+    text-decoration: none;
 }
 
 .product-area{  
@@ -195,25 +223,25 @@ body{
     border-top: 1px solid #eee;
     color: #222;
     font-size: 12px;
+
 }
 
 .footer-top{
+    display: flex;
     width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
-    gap: 50px;
-    padding: 50px 8%;
+    /* gap: 50px; */
+    padding: 0 50px;
 }
 
 .footer-links{
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    gap: 15px;
+    align-items: center;
+    gap: 6px;
 }
 
 .footer h3{
-    font-size: 12px;
+    font-size: 14px;
     font-weight: bold;
     margin-bottom: 10px;
 }
@@ -224,29 +252,43 @@ body{
     font-size: 11px;
 }
 
+.footer-links a:hover{
+    text-decoration: underline;
+}
+
 .footer-news{
     text-align: center;
-    max-width: 500px;
+    max-width: 350px;
     width: 100%;
     margin: auto;
+    gap:0;
 }
 
 .footer-news p{
     margin: 15px 0;
-    line-height: 1.7;
+    line-height: 1.2;
+}
+
+.footer-news h3{
+    font-size: 16px;
+}
+
+.footer-news a{
+    color: black;
 }
 
 .email-box{
     display: flex;
     width: 100%;
     margin: 25px 0 12px;
+    gap: 18px;
 }
 
 .email-box input{
     flex: 1;
     min-width: 0;
     padding: 13px;
-    border: 1px solid #ccc;
+    border: 1px solid black;
     font-size: 12px;
 }
 
@@ -258,17 +300,21 @@ body{
     font-size: 18px;
 }
 
-.footer-news small{
-    display: block;
-    width: 100%;
-    font-size: 10px;
-    line-height: 1.8;
-}
 
 .footer-contact{
     width: 100%;
     text-align: center;
     padding: 30px 15px;
+    line-height: 1;
+}
+
+.footer-contact a{
+    color: black;
+    text-decoration: none;
+}
+
+.footer-contact a:hover{
+    text-decoration: underline;
 }
 
 .footer-contact p{
@@ -285,6 +331,11 @@ body{
     font-weight: bold;
 }
 
+.social-links a{
+    text-decoration: none;
+    color: black;
+}
+
 .footer-bottom{
     width: 100%;
     min-height: 65px;
@@ -293,6 +344,10 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.footer-bottom a{
+    font-size: 15px;
 }
 
 .footer-bottom div{
