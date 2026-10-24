@@ -1,4 +1,4 @@
-Name: Nike
-URL: https://www.nike.com/
+Name: Breakout
+URL: https://www.breakout.com.pk/
 
 ![Homepage](images/screenshot-homepage.png)
