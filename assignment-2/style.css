@@ -516,3 +516,30 @@ body{
     }
 
 }
+
+
+@media (max-width: 640px){
+
+
+    .categories{
+         grid-template-columns: repeat(2, 1fr);
+    }
+
+    .product-card{
+    flex: 0 0 70%;
+}
+}
+
+
+
+@media (max-width: 450px){
+
+    .first-banner{
+        height: 800px;
+    }
+
+
+    .category-banner{
+        height: 550px;
+    }
+}
