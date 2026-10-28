@@ -1,4 +1,14 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+body{
+    color: #222;
+    font-family: plus-jakarta-sans, sans-serif;
+    line-height: 24px;
+}
 button{
     cursor: pointer;
 }
@@ -21,7 +31,7 @@ button{
 }
 
 .slide{
-    width: clamp(400px, 25vw, 360px);
+    width: clamp(400px, 25vw, 460px);
     flex-shrink: 0;
     aspect-ratio: 3 / 4.4;
     background: #ececec;
@@ -353,30 +363,21 @@ button{
         overflow: visible;
     }
 
-    .slider{
-        overflow: visible;
-        background: #fff;
-    }
-
-    .track{
+    .track {
         width: 100%;
-        overflow-x: auto;
         animation: none;
-        scroll-snap-type: x mandatory;
-        scrollbar-width: none;
     }
 
-    .track::-webkit-scrollbar{
+    .slide {
         display: none;
-    }
-
-    .slide{
         width: 100%;
-        aspect-ratio: 3 / 4;
-        scroll-snap-align: start;
     }
 
-    .slide.copy{
+    .slide:first-child {
+        display: block;
+    }
+
+    .slide.copy {
         display: none;
     }
 
