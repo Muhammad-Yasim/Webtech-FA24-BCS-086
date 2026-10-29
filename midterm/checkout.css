@@ -1,0 +1,97 @@
+.checkout-page {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.checkout-page h1 {
+    margin-bottom: 25px;
+}
+
+.checkout-form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.checkout-form fieldset {
+    min-width: 0;
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+
+.checkout-form legend {
+    padding: 0 8px;
+    font-weight: bold;
+}
+
+.form-field {
+    display: grid;
+    grid-template-columns: 110px 1fr;
+    gap: 8px 14px;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.form-field label {
+    font-weight: bold;
+}
+
+.form-field input,
+.form-field select {
+    width: 100%;
+    min-height: 38px;
+    padding: 7px;
+    border: 1px solid #aaa;
+    font: inherit;
+}
+
+.error-message {
+    display: none;
+    grid-column: 2;
+    color: #c00;
+    font-size: 12px;
+    line-height: 1.3;
+}
+
+.form-field input:user-invalid,
+.form-field select:user-invalid {
+    border: 2px solid #c00;
+}
+
+.form-field input:user-invalid + .error-message,
+.form-field select:user-invalid + .error-message {
+    display: block;
+}
+
+.checkout-form button {
+    grid-column: 1 / -1;
+    width: 100%;
+    min-height: 44px;
+    color: white;
+    background: #222;
+    border: 0;
+    cursor: pointer;
+}
+
+@media (max-width: 686px) {
+    .checkout-form {
+        grid-template-columns: 1fr;
+    }
+
+    .form-field {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 5px;
+    }
+
+    .error-message {
+        display: none;
+    }
+
+    .form-field input:user-invalid + .error-message,
+    .form-field select:user-invalid + .error-message {
+        display: block;
+    }
+}
