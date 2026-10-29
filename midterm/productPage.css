@@ -1,0 +1,433 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    color: #222;
+    font-family: plus-jakarta-sans, sans-serif;
+    line-height: 24px;
+}
+button{
+    cursor: pointer;
+}
+
+.top{
+    position: relative;
+    overflow: hidden;
+}
+
+.slider{
+    position: relative;
+    overflow: hidden;
+    background: #f1f1f1;
+}
+
+.track{
+    display: flex;
+    width: 200vw;
+    animation: slideMove 20s linear infinite;
+}
+
+.slide{
+    width: clamp(400px, 25vw, 460px);
+    flex-shrink: 0;
+    aspect-ratio: 3 / 4.4;
+    background: #ececec;
+}
+
+.slide img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@keyframes slideMove{
+    from{
+        transform: translateX(0);
+    }
+
+    to{
+        transform: translateX(-100vw);
+    }
+}
+
+
+
+.info{
+    position: absolute;
+    bottom: 12px;
+    right: 30px;
+    width: 24%;
+    min-width: 370px;
+    height: 70%;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.85);
+}
+
+.info a{
+    text-decoration: none;
+}
+
+.name{
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.price{
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+
+
+.baadmay{
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 12px;
+}
+
+.baadmay-logo{
+    background: #6a1fe0;
+    color: #fff;
+    font-size: 18px;
+    padding: 4px 6px;
+    border-radius: 5px;
+}
+
+.baadmay-text{
+    font-size: 12px;
+    color: #333;
+}
+
+.baadmay-text b{
+    color: #6a1fe0;
+}
+
+.sku{
+    font-size: 12px;
+}
+
+.size-head{
+    display: flex;
+    justify-content: space-between;
+    font-size: 10px;
+    margin-bottom: 6px;
+}
+
+.size-guide{
+    color: #111;
+    text-decoration: none;
+}
+
+.sizes{
+    display: flex;
+    gap: 4px;
+    margin-bottom: 10px;
+}
+
+.sizes input{
+    display: none;
+}
+
+.sizes label{
+    width: 55px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #e5e5e5;
+    background: #fff;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.sizes input:checked + label{
+    background: #111;
+    color: #fff;
+    border-color: #111;
+    font-weight: 600;
+}
+
+.model-note{
+    font-size:10px;
+    text-align: center;
+    color: #444;
+    margin-bottom: 8px;
+}
+
+.btn-black,
+.btn-white{
+    height: 50px;
+    font-size: 12px;
+    letter-spacing: 0.4px;
+    border: 1px solid #111;
+    border-radius: 0;
+}
+
+.btn-black{
+    background: #111;
+    color: #fff;
+}
+
+.btn-white{
+    background: #fff;
+    color: #111;
+}
+
+.color-note{
+    margin-top: 10px;
+    font-size: 11px;
+    text-align: center;
+    color: #444;
+    line-height: 1.5;
+}
+
+
+.details-row{
+    display: flex;
+}
+
+.big-pic{
+    width: 38%;
+}
+
+
+.big-pic img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background: #ececec;
+    min-height: 400px;
+}
+
+.text-side{
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex: 1;
+}
+
+.text-box{
+    width: 100%;
+    max-width: 450px;
+    padding: 40px;
+}
+
+.head{
+    font-size: 12px;
+    font-weight: 700;
+    margin: 0 0 12px;
+}
+
+.para{
+    font-size: 11px;
+    line-height: 1.7;
+    color: #666;
+    margin-bottom: 14px;
+}
+
+.para.sub{
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 6px;
+}
+
+.list{
+    margin: 0 0 14px;
+    padding-left: 16px;
+}
+
+.list li{
+    font-size: 10px;
+    line-height: 1.7;
+    color: #666;
+}
+
+.acc{
+    border-bottom: 1px solid #eee;
+}
+
+.acc summary{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 0;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.acc summary::-webkit-details-marker{
+    display: none;
+}
+
+.acc summary::after{
+    content: "";
+    width: 14px;
+    height: 8px;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 8' fill='none' stroke='%23666' stroke-width='1'%3E%3Cpath d='M1 1l6 6 6-6'/%3E%3C/svg%3E") no-repeat center;
+    transition: transform 0.2s;
+}
+
+.acc[open] summary::after{
+    transform: rotate(180deg);
+}
+
+.buttons{
+    display: grid;
+    gap: 8px;
+}
+
+.float-bar{
+    position: fixed;
+    bottom: 26px;
+    left: 40%;
+    width: 58%;
+    min-width: 380px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 14px 8px 10px;
+    background: #fff;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.18);
+    border-radius: 4px;
+    z-index: 50;
+}
+
+.float-img{
+    width: 50px;
+    height: 100%;
+    object-fit: cover;
+    background: #ececec;
+}
+
+.float-text{
+    flex: 1;
+}
+
+.float-name{
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.float-size{
+    font-size: 13px;
+    color: #888;
+    margin: 2px 0;
+}
+
+.float-price{
+    font-size: 13px;
+    font-weight: 500;
+}
+
+
+.float-btn{
+    background: #111;
+    color: #fff;
+    border: 0;
+    font-size: 12px;
+    padding: 10px 18px;
+}
+
+@supports (animation-timeline: scroll()){
+    .float-bar{
+        opacity: 0;
+        pointer-events: none;
+        animation: showBar linear both;
+        animation-timeline: scroll(root);
+        animation-range: 500px 600px;
+    }
+}
+
+@keyframes showBar{
+    from{
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    to{
+        opacity: 1;
+        pointer-events: auto;
+    }
+}
+
+
+
+@media (max-width: 768px){
+    .top{
+        overflow: visible;
+    }
+
+    .track {
+        width: 100%;
+        animation: none;
+    }
+
+    .slide {
+        display: none;
+        width: 100%;
+    }
+
+    .slide:first-child {
+        display: block;
+    }
+
+    .slide.copy {
+        display: none;
+    }
+
+    .info{
+        position: static;
+        width: 100%;
+        min-width: 0;
+        height: auto;
+        padding: 12px 12px 16px;
+        background: #fff;
+    }
+
+    .name{
+        font-size: 14px;
+        font-weight: 400;
+    }
+
+    .price{
+        font-size: 12px;
+    }
+
+    .baadmay-text{
+        font-size: 10px;
+    }
+
+
+    .big-pic{
+        display: none;
+    }
+
+    .text-side{
+        width: 100%;
+    }
+
+    .text-box{
+        max-width: none;
+        padding: 0 12px 30px;
+    }
+
+
+    .float-bar{
+        left: 10px;
+        right: 10px;
+        bottom: 10px;
+        width: auto;
+        min-width: 0;
+    }
+
+
+    .float-btn{
+        font-size: 10px;
+    }
+}
