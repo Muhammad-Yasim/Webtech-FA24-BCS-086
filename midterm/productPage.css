@@ -377,10 +377,6 @@ button{
         display: block;
     }
 
-    .slide.copy {
-        display: none;
-    }
-
     .info{
         position: static;
         width: 100%;
